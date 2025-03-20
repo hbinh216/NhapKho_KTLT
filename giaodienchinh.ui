@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>723</width>
+    <height>542</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>723</width>
+    <height>542</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>723</width>
+    <height>542</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>723</width>
+      <height>542</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>723</width>
+      <height>542</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>723</width>
+      <height>542</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab {
+    width: 150px;  /* Điều chỉnh độ rộng tab */
+    height: 30px;  /* Điều chỉnh chiều cao tab */
+}
+QTabBar::tab:selected {
+    font-weight: bold;  /* Làm đậm tab đang chọn */
+}
+QTabBar::tab {
+    text-align: center;  /* Căn giữa chữ trong tab */
+}
+QTabBar {
+    qproperty-alignment: center;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>15</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="widget">
+     <attribute name="title">
+      <string>Trang chủ</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>261</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 2px solid black;       /* Viền ngoài bảng */
+    gridline-color: black;         /* Màu đường kẻ ô */
+}
+QHeaderView::section {
+    background-color: #f0f0f0;     /* Màu nền header */
+    border: 1px solid #aaa;        /* Viền header */
+}
+</string>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>260</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Thông báo chung</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>10</y>
+        <width>321</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    border: 1px solid black;  /* Viền 1px màu đen */
+}</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Thông báo chi tiết&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="plnHienThongBao">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPlainTextEdit {
+    border: 1px solid black;  /* Viền 2px màu đen */
+    border-radius: 3px;       /* Bo tròn góc 5px (nếu muốn) */
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>400</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: 1px solid black;         /* Viền đen 2px */
+    border-radius: 10px;             /* Bo góc 10px */
+    padding: 5px 15px;               /* Thêm padding cho nút */
+    background-color: #f0f0f0;       /* Màu nền mặc định */
+    color: black;                    /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e0e0e0;       /* Màu nền khi di chuột vào */
+    border: 2px solid darkgray;      /* Viền đổi thành màu xám đậm */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Xóa thông báo</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>400</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: 1px solid black;         /* Viền đen 2px */
+    border-radius: 10px;             /* Bo góc 10px */
+    padding: 5px 15px;               /* Thêm padding cho nút */
+    background-color: #f0f0f0;       /* Màu nền mặc định */
+    color: black;                    /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e0e0e0;       /* Màu nền khi di chuột vào */
+    border: 2px solid darkgray;      /* Viền đổi thành màu xám đậm */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Xóa tất cả thông báo</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="QtblXuatThongTin_5">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>160</y>
+        <width>321</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 2px solid black;       /* Viền ngoài bảng */
+    gridline-color: black;         /* Màu đường kẻ ô */
+}
+QHeaderView::section {
+    background-color: #f0f0f0;     /* Màu nền header */
+    border: 1px solid #aaa;        /* Viền header */
+}
+</string>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>Mã sản phẩm</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Tên sản phẩm</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Danh mục</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Đơn giá</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Số lượng</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Trạng thái</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Ngày nhập kho</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Ngày hết hạn</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Hàng tồn tối thiểu</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Thông tin hàng hóa trong kho</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Danh sách</string>
+     </attribute>
+     <widget class="QTableWidget" name="tblDanhSach">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>130</y>
+        <width>631</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 2px solid black;       /* Viền ngoài bảng */
+    gridline-color: black;         /* Màu đường kẻ ô */
+}
+QHeaderView::section {
+    background-color: #f0f0f0;     /* Màu nền header */
+    border: 1px solid #aaa;        /* Viền header */
+}
+</string>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>7</number>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Mã sản phẩm</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Tên sản phẩm</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Đơn giá</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Số lượng</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Ngày nhập kho</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Hạn sử dụng</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Trạng thái</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>69</y>
+        <width>441</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Danh mục:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Thực phẩm</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_2">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Đồ gia dụng</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_3">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Văn phòng phẩm</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>0</y>
+        <width>601</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#000000;&quot;&gt;DANH SÁCH HÀNG TRONG KHO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Xuất - Nhập kho</string>
+     </attribute>
+     <widget class="QPushButton" name="btnNhapKho">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>400</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: 1px solid black;         /* Viền đen 2px */
+    border-radius: 10px;             /* Bo góc 10px */
+    padding: 5px 15px;               /* Thêm padding cho nút */
+    background-color: #f0f0f0;       /* Màu nền mặc định */
+    color: black;                    /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e0e0e0;       /* Màu nền khi di chuột vào */
+    border: 2px solid darkgray;      /* Viền đổi thành màu xám đậm */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Nhập kho</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>651</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#000000;&quot;&gt;NHẬP KHO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnNhapKho_2">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>400</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: 1px solid black;         /* Viền đen 2px */
+    border-radius: 10px;             /* Bo góc 10px */
+    padding: 5px 15px;               /* Thêm padding cho nút */
+    background-color: #f0f0f0;       /* Màu nền mặc định */
+    color: black;                    /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e0e0e0;       /* Màu nền khi di chuột vào */
+    border: 2px solid darkgray;      /* Viền đổi thành màu xám đậm */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Xóa</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="QtblXuatThongTin_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>321</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 2px solid black;       /* Viền ngoài bảng */
+    gridline-color: black;         /* Màu đường kẻ ô */
+}
+QHeaderView::section {
+    background-color: #f0f0f0;     /* Màu nền header */
+    border: 1px solid #aaa;        /* Viền header */
+}
+</string>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>Mã sản phẩm</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Tên sản phẩm</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Danh mục</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Đơn giá</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Số lượng</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Ngày nhập kho</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Ngày hết hạn</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Hàng tồn tối thiểu</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Trạng thái</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Nhập thông tin</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+     </widget>
+     <widget class="QTableWidget" name="QtblXuatThongTin_4">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>80</y>
+        <width>321</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 2px solid black;       /* Viền ngoài bảng */
+    gridline-color: black;         /* Màu đường kẻ ô */
+}
+QHeaderView::section {
+    background-color: #f0f0f0;     /* Màu nền header */
+    border: 1px solid #aaa;        /* Viền header */
+}
+</string>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>Mã sản phẩm</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Tên sản phẩm</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Danh mục</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Đơn giá</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Số lượng</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Trạng thái</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Ngày nhập kho</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Ngày hết hạn</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Hàng tồn tối thiểu</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Thông tin hàng hóa trong kho</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>723</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
